@@ -1,0 +1,35 @@
+function getMilk(money,costPerBottle) {   
+  console.log("leaveHouse");
+  console.log("moveRight");
+  console.log("moveRight");
+  console.log("moveUp");
+  console.log("moveUp");
+  console.log("moveUp");
+  console.log("moveUp");
+  console.log("moveRight");
+  console.log("moveRight");
+
+    console.log("please ,  Give " + noOfBottles(money,costPerBottle) + " Bottles of milk.")
+    
+  console.log("moveLeft");
+  console.log("moveLeft");
+  console.log("moveDown");
+  console.log("moveDown");
+  console.log("moveDown");
+  console.log("moveDown");
+  console.log("moveLeft");
+  console.log("moveLeft");
+  console.log("enterHouse");
+    return console.log("Hey, boss " + reminder(money, costPerBottle) + " rupees is your reminder");
+
+}
+function noOfBottles(amountGiven, costPerBottle){
+    return Math.floor(amountGiven/costPerBottle);
+}
+
+function reminder(amountGiven,costPerBottle){
+    return amountGiven% costPerBottle
+}
+getMilk(5,1.5);
+
+the input that given will taken by corresponding varibles and after reaching noOfBottles . it will search for the function named noOfbottles the value of money and costPerBottle will given to its inputs which is amountGiven and costPerBottle . therefor it gives the output and then after reaching reminder same will happen . the value given by function will be replaced in its console messege.

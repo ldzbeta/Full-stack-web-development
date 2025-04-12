@@ -1,0 +1,114 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around ;
+    align-items: center;
+    height: 100%;
+}
+.nav-button{
+    display: inline;
+    margin: 0px 30px;
+}
+.nav-button:hover,.service-button:hover {
+    background-color: #537bfc;
+    color: white;
+    padding: 0.3em 1em;
+    border-radius: 3px;
+
+}
+
+#logo{
+    width: 10em;
+}
+
+#container-1{
+    display: grid;
+    
+    grid-template-columns: 60% 40%;
+}
+
+#text-container-1{
+    justify-content: center;
+    text-align: left;
+    margin: 0% 10%;
+
+}
+
+#login-button{
+    padding: 0.4em 2em;
+    font-size: 70%;
+    color: white;
+    border: none;
+    background-color: #537bfc;
+    margin: 2% 0%;
+}
+
+#detail-section{
+    display: grid;
+    grid-template-columns: 30% 65% 5%;
+}
+
+p{
+    padding: 0%;
+    margin: 0%;
+    display: inline;
+}
+
+h5{
+    margin: 0%;
+    display: inline;
+    color:#537bfc ;
+}
+
+.office-details{
+    margin: 20px 60px;
+}
+
+button{
+    display: block;
+}
+
+img-1{
+    width: 1em;
+}
+
+h2,h3,.service-text {
+    text-align: center;
+}
+
+#service-grid{
+	margin: 10px;
+	height: 300px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.service-box > img{
+    width: 25%;
+    justify-content: center;
+	align-items: center;
+}
+
+.service-button{
+    border: solid 2px #537bfc;
+    color: #537bfc;
+    background-color: white;
+    padding: 0.3em 1em;
+    border-radius: 3px;
+}
+
+footer{
+    display: inline;
+    margin: 0%;
+}
+.footer-2{
+    float: right;
+
+}
+
+.footer-1{
+    float: left;
+}

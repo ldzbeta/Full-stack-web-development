@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Carousel</title>
+    <style>
+        body{
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: sans-serif;
+        }
+        div{
+            display: inline;
+        }
+        div::after{
+            background-color: blue;
+            /* content property is only can used for after pseudo class */
+            content: "";
+            animation: 2s infinite swap;
+            padding: .3rem;
+            margin-left: .6rem;
+            color: white;
+
+        }
+        @keyframes swap{
+            0%{
+                content: "Cats";
+            }
+            50%{
+                content: "Dogs";
+            }
+            100%{
+                content: "Rabbit";
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        I LOVE
+    </div>
+  </body>
+</html>

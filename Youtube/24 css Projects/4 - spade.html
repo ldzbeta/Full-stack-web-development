@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spade</title>
+    <style>
+      body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .card{
+        border-radius: 10px;
+        border: solid black 2px;
+        display: grid;
+        grid-template-columns: 1fr 6fr 1fr;
+        height: 300px;
+        width: calc(300px*2/3);
+      }
+      .right{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      .middle-container{
+        margin: 40px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .four{
+        color: red;
+        font-size: 2rem;
+        margin: 0 .3rem;
+      }
+      .love{
+        font-size: 1.2rem;
+      }
+      .middle{
+        font-size: 3rem;
+      }
+
+      .rotate{
+        transform: rotate(180deg);
+      }
+      .container{
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="left">
+        <div class="four">4</div>
+        <div class="love">❤️</div>
+        <!-- Instead of love emoji we can use &hearts; -->
+      </div>
+      <div class="middle-container">
+        <div class="container">
+          <div class="love middle">❤️</div>
+          <div class="love middle">❤️</div>
+        </div>
+        <div class="container">
+          <div class="love middle rotate">❤️</div>
+          <div class="love middle rotate">❤️</div>
+        </div>
+      </div>
+      <div class="right">
+
+        <div class="love rotate">❤️</div>
+        <div class="bottom-4 four rotate">4</div>
+      </div>
+    </div>
+  </body>
+</html>

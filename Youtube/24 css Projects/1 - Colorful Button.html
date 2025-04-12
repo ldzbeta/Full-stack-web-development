@@ -1,0 +1,93 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colorful Button</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: black;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn{
+            background-color: black;
+            color: rgb(184, 184, 184);
+            font-size: 1.5rem;
+            padding:  1rem 1.25rem;
+            border: solid 3px transparent;
+            border-image: linear-gradient(to top right,rgb(135, 2, 120) , rgb(223, 180, 39));
+            border-image-slice: 1;
+            /* it creates a  image for border which is gradient and add 1% of it from edge to the each part of border
+            the problem with this property after using this we cannot use border radius property 
+            use mdn border image generator */
+            letter-spacing:  0.1em;
+        }
+
+        .btn:hover{
+            border-image: linear-gradient(to top left,rgb(135, 2, 120) , rgb(223, 180, 39)) 1 / 3px;
+            color: white;
+            padding: 1.1rem 1.35rem;
+        }
+    </style>
+  </head>
+  <body>
+    <button class="btn">Start Coding!</button>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colorful gradient button</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .container{
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            margin: 0;
+        }
+
+        .button-border{
+            background: linear-gradient(to top left,rgb(135, 2, 120) , rgb(223, 180, 39));
+            padding: 2px;
+            border-radius: 2px;
+            /* can apply border radius */
+        }
+        .button-border:hover{
+            background: linear-gradient(to top right,rgb(135, 2, 120) , rgb(223, 180, 39));
+        }
+
+        .button{
+            border: none;
+            color: rgb(189, 189, 189);
+            background-color: black;
+            padding:  1rem 1.25rem;
+
+        }
+
+        .button:hover{
+            color: white;
+            padding: 1.1rem 1.35rem;
+
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="button-border"><button class="button">
+            Start Coding!
+        </button></div>
+    </div>
+  </body>
+</html>

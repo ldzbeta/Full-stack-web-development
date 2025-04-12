@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .loader{
+            width: 300px;
+
+            height: 300px;
+            border:  2em solid rgb(213, 212, 212);
+            border-radius: 50%;
+            border-top: 2em solid rgb(95, 7, 204);
+            animation: spin 1.5s infinite;
+            /* add linear for smooth and continues */
+        }
+        @keyframes spin{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="loader"></div>
+    </div>
+  </body>
+</html>

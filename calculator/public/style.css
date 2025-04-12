@@ -1,0 +1,128 @@
+*{
+    margin: 0px;
+    margin: 0px;
+    display: inline;
+    font-family: poppins;
+    box-sizing: border-box;
+}
+
+#interface{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    height: 700px;
+    width: 412px;
+    border: solid white 1px;
+    box-shadow: 5px 10px 30px rgba(44, 53, 94, 0.5);
+    padding: 30px;
+    border-radius: 2rem;
+    background-color: rgb(241, 242, 243);
+
+    /* how to align an item to the centre  */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+#display{
+    width: 390px;
+    border: solid 1px rgba(184, 183, 183,0.7);
+    display: flex;
+    background-color: white;
+    height: 35%;
+    border-radius: .6em;
+    margin-bottom: 10px;
+    justify-content: flex-end;
+    align-items: end;
+    padding-right: 25px;
+    font-size: 4em;
+    font-weight: 250;
+    overflow: hidden;
+}
+
+p {
+  transform: translate(0, 12px);
+}
+
+#buttons-section{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+
+}
+
+.btn{
+    text-align: center;
+    border-radius: 33px;
+    border: none;
+    font-size: 2.5em;
+    padding: 25px 20px;
+    margin: 5px;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+  }
+
+.number-btn{
+    background-color: white;
+
+}
+
+.operator-btn , .equal-btn{
+    background-color: rgb(75 94 252);
+    color: white;
+}
+
+.clear-btn{
+    background-color: rgba(251, 2, 2,.9);
+    color: white;
+}
+
+.section{
+    display: flex;
+}
+
+.btn-size{
+    font-size: 1.9em;
+}
+
+.clicked{
+    border: 10px solid transparent;
+    border-image: radial-gradient(
+    var(--rotate),
+  );
+  opacity: 1;
+  animation: spin 2.5s ease-out ;
+}
+
+span {
+  display: none;
+}
+
+img{
+  height: 20px;
+  width: 20px;
+}
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+
+
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }

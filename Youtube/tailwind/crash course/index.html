@@ -1,0 +1,91 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+  </head>
+  <body>
+    <main class="p-5">
+      <h1 class="text-center text-lg text-green-400">Hello World!</h1>
+      <div
+        class="w-full h-10 bg-violet-200 border-violet-600 border-2 rounded-md my-4 p-2"
+      >
+        <p class="text-center font-mono font-extrabold">A div</p>
+      </div>
+
+      <!-- layout -->
+      <div class="fixed w-10 h-10 bg-red-500 top-0"></div>
+      <div class="flex justify-center space-x-2">
+        <div class="h-16 w-16 rounded-full bg-blue-500"></div>
+        <div class="h-16 w-16 rounded-full bg-blue-500"></div>
+        <div class="h-16 w-16 rounded-full bg-blue-500"></div>
+      </div>
+
+      <div class="grid grid-col-5 gap-2 mt-3">
+        <div class="bg-violet-500 h-12"></div>
+        <div class="bg-violet-500 h-12"></div>
+        <div class="bg-violet-500 h-12"></div>
+      </div>
+      <div class="md:block hidden">
+        <p>I wiill appear for device resolution > 768px</p>
+      </div>
+      <div class="max-md:block hidden">
+        <p>I wiill appear for device resolution > 768px</p>
+      </div>
+
+      <button
+        class="my-2 rounded-lg bg-blue 500 px-4 py-2 text-white hover:bg-blue-700 focus:outline-none focus:ring-blue-300 acitve:bg-blue-800"
+      >
+        Click me
+      </button>
+      <ul class="my-2 space-y-2">
+        <li class="bg-white p-2 first:bg-yellow-200 even:bg-green-200"></li>
+        <li class="bg-white p-2 first:bg-yellow-200 even:bg-green-200"></li>
+        <li class="bg-white p-2 first:bg-yellow-200 even:bg-green-200"></li>
+        <li class="bg-white p-2 first:bg-yellow-200 even:bg-green-200"></li>
+        <li class="bg-white p-2 first:bg-yellow-200 even:bg-green-200"></li>
+      </ul>
+
+      <!-- Theme Dark -->
+      <div
+        class="card" 
+      >
+      <!-- saving class of styles -->
+        <h3 class="text-base font-medium tracking-tight text-slate-900 dark:text-white">
+          This is a text element
+        </h3>
+        <p class="mt-2 text-sm text-slate-500 dark:text-blue:100">
+          this is an even longer p element
+        </p>
+        <button
+          class="text-blue-900 px-4 py-2 text-sm font-medium mt-8 bg-blue-100 rounded-md"
+          id="toggleDark"
+          onclick="document.body.classList.toggle('dark')"
+        >
+          Toggle Dark Mode
+        </button>
+      </div>
+    </main>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", () => {
+          const toggleDark = document.getElementById('toggleDark')
+          toggleDark.addEventListener('click', function() {
+            if(document.documentElement.classList.includes('dark')) {
+              document.documentElement.classList.remove('dark')
+            }
+            else {
+              document.documentElement.classList.add('dark')
+            }
+            alert("click!")
+          });
+        });
+      </script>
+
+      <!-- custom style -->
+       <!-- 1. -->
+       <p class="text-xl text-[#973f29] p-[16px]" >chestnut color</p>
+       <!-- 2. from config file -->
+       <p class="text-xl text-chestnut p-[16px]" >chestnut color</p>
+  </body>
+</html>

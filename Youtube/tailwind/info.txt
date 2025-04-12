@@ -1,0 +1,6 @@
+text-[50px] - font size 50 - for custom values 
+- for this it uses justin compiler 
+
+@tailwind base; - apply styles globally across the project 
+@tailwind components - to components or reusable elements 
+@tailwing utilities for atomic elements like padding margin etc

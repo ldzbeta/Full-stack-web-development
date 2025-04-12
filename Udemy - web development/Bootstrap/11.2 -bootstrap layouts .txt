@@ -1,0 +1,18 @@
+https://appbrewery.github.io/bootstrap-layout
+
+<div class="row">
+    <div class="col-xl-6 col-sm-12">50% desktop, 100% mobile</div>
+    <div class="col-xl-6 col-sm-12">50% desktop, 100% mobile</div>
+  </div>
+  
+  <div class="row">
+    <div class=" col-lg-6">Column 1</div>
+    <div class="col-sm">Column 2</div>
+    <div class="col-sm">Column 3</div>
+  </div>
+
+ <div class="row">
+        <div class="col-xxl-1 col-xl-2 col-lg-4 col-md-6">Column 1</div>
+        <div class="col">Column 2</div>
+      </div>
+          

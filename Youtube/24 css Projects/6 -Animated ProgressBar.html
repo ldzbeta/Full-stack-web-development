@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress bar</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .container{
+            width: 80%;
+            height: 8%;
+            background-color: rgb(180, 180, 180);
+            border-radius: 50px;
+        }
+        .loader{
+            width: 10%;
+            height: 100%;
+            border-radius: 50px;
+            animation: 3s infinite linear loader;
+        }
+        @keyframes loader{
+            30%{
+                width: 10%;
+                background-color: red;
+            }
+            50%{
+                width: 50%;
+                background-color: blue;
+            }
+            80%{
+                width: 100%;
+                background-color: green;
+            }
+            100%{
+                width: 100%;
+                background-color: green;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="loader"></div>
+    </div>
+  </body>
+</html>

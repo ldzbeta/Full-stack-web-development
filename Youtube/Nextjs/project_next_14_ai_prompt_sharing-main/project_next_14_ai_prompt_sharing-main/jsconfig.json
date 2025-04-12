@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@*": ["./*"]
+      //      "@/*": ["./*"] - normally this will be the format which implies take everything from root remove / to avoid that, even though it takes from root
+
+    }
+  }
+}

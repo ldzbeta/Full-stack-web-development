@@ -1,0 +1,60 @@
+next.js is a react framework now days mostly react frameworks are started to use. there for it fundamentally built on top of react
+
+1)react js render on client side while the next js render on server side . this is the main difference
+next js give options to render on client side also
+
+normally browsing experience is client side rendering in which the html and js files from server reach the client browser and run it. while server side rendering sends already rendered page which helps to immediate rendering of pages
+
+it helps in seo , when search engine indexing the pages the pre-rendered code of next js is fast and dynamic , while normal react page suffers in this
+
+2) while react uses react router dom for routing , next js uses file based routing system
+
+each file in the app system become a route and their name become routes path
+
+3) API routes
+Enables the creation of serverless functions to handle API requests
+simply creating route.js we can create and api endpoint
+
+4) automatic code splitting 
+Code splitting is a technique that breaks
+down large bundles of JavaScript code
+into smaller, more manageable chunks
+that can be loaded as needed.
+reduces initial time of loading
+
+no need of lazy loading and use of suspense it is automatic in next js
+
+Start
+npx create-next-app@latest ./
+
+import alias yes
+./src no , 
+
+app folder is important
+layout.js is where all components of app are wrapped inside
+any return code return dialog that you written on this page lead to show in all pages 
+
+
+next js provides three types of data fetching 
+1. Server side Rendering (SSR)
+- dynamic servers side rendering of data. each request create a new rendering cycle and data fetch 
+2. static site generation
+3. Incremental Static Generation
+
+
+by the serverless rendering next js allow us to handle http request without seperate backend functionality
+
+we can define meta data in 2 ways
+1. static
+2. dynamic
+
+for static on the page file also export another function called meta data
+
+export const metadata={
+	title:'Home',
+};
+
+Output:
+<head>
+<title>Home</title>
+</head>

@@ -1,0 +1,72 @@
+<!-- em and rem relative css units that are relative to font size  or viewport
+ em are relative to parent font size normally,
+ 1em = 16px (on zoom =100%, and if parent is body)
+ 1em copy or same font size of parent .
+ em hav demerit of it relative to parent and if parent is child of another element it causes multiplication effect.
+
+so we can use rem which is const relative to html element(to change the basic font size change font size of parent)
+
+⭕ font-size use rem
+⭕ padding and margin use em
+⭕ width em or percentage, also some time use pixel
+
+🚩if the font size of parent(body) is not mentioned and 
+h1{
+font size: 24 px;
+margin: 2 em;
+}
+
+value of margin will  2*24 = 48px (even parent font size is mentioned)
+
+ ---------------------------------  ---------------------------------
+ percentage are written relative to its parent properties
+ 
+ max width can be used for container can used to increase space in large screen (to avoid large picture and comparatively lesser text)
+ .container{
+ width:90%;
+ max width:620px;
+ min width:500px;(optionally used)
+ } 
+ below 620 px it become responsively adjusting to 90% of screen width . below 500px it enables scrolling bar other wise it become highly shrink picture
+ 
+ if we apply only max width when the size of screen decreases to less than the max width the size of div adjust to max size of the screen-->
+ <!-- ---------------------------------  --------------------------------- -->
+
+<!-- div's are block element and usually take 100% of width(even we change width it does not going become flex or inline) , where as span is inline  
+ -- margin auto auto can used align content center and margin 0 auto can used to align the content centre horizontally
+ -- for image use max width 100% for prevent change in length more than the actual width of image
+ -- justify content space between can used to insert space it uses extra space and insert equally 
+ -- align items stretch can used to stretch the container and use 100% width
+ -- to flex both horizontal and vertical we can use flex start in align items and display flex
+ -- align items base line make text content of container starting lies on same line
+ ---------------------------------  ---------------------------------
+MEDIA QUERIES
+ 
+@ media screen and ({condition}){
+
+}
+examples of {condition} = 
+max width = 400px => upto 400 px apply this style
+min width = 400px => while the size  of screen decreases and reach upto 400 px apply this style
+
+@media (condition) can also used
+@media print{} is used to make changes when the page is taken for print
+@media (max-width=600px;){}is generally used
+
+media query should come after default selector in the page, that is why generally media query is written at bottom of file.
+---------------------------------  ---------------------------------
+NAV
+
+general structure
+<nav>
+    <ul>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
+</nav>
+
+generally inside the nave the buttons to other pages are written title and icon of page are written with nav element in the header tag.
+to separate the title and nav to the end(2 items to the end of a div) we can use justify content : space-between 
+for responsive nav use change the screen size and select one (675px)
+ -->

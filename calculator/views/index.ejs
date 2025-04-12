@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title style="display: none;">Simple Calculator</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- directory of style should written with respect to public folder -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="icon" href="../public/calculator.png">
+    </head>
+    <body>
+        <div id="interface">
+            <section id="display"><p></p></section>
+            
+            <div id="buttons-section">
+                <div class="section">
+                    <div name="num-key" value="7" class="btn number-btn display-btn">7</div>
+                    <div name="num-key" value="8" class="btn number-btn display-btn">8</div>
+                    <div name="num-key" value="9" class="btn number-btn display-btn">9</div>
+                    <div class="btn operator-btn display-btn" >+</div>
+                </div>
+                <div class="section">
+                    <div name="num-key" value="4" class="btn number-btn display-btn">4</div>
+                    <div name="num-key" value="5" class="btn number-btn display-btn">5</div>
+                    <div name="num-key" value="6" class="btn number-btn display-btn">6</div>
+                    <div class="btn operator-btn display-btn" >-</div>
+                </div>
+                <div class="section">
+                    <div name="num-key" value="1" class="btn number-btn display-btn">1</div>
+                    <div name="num-key" value="2" class="btn number-btn display-btn">2</div>
+                    <div name="num-key" value="3" class="btn number-btn display-btn">3</div>
+                    <div class="btn operator-btn btn-size display-btn" ><img src="multiplication.png"></i><span>*</span></div>
+                </div>
+                <div class="section">
+                    <div class="btn clear-btn btn-size">C</div>
+                    <div class="btn number-btn display-btn">0</div>
+                    <div class="btn  equal-btn">=</div>
+                    <div class="btn operator-btn btn-size display-btn" ><img src="divide.png" style="width: 30px;height: 30px;" alt="" srcset=""><span>/</span></div>
+                </div>
+            </div>
+        
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="functions.js"></script>
+    </body>
+</html>
