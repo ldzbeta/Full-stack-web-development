@@ -13,3 +13,6 @@ if one user itself uses different machine both of them gate same result 🔁
 - EC is main backend where it pushes submission of code to queue and worker will take it from queue and run and the result will be stored in db, main backend will  
 repeatedly checking db to get response - polling approach ⏳
 - while in pubSub approach as in image, even leetcode can add lucky button for coins to all the users through pubsub at that time 🎉
+---
+- Redis is an open-source, in-memory data structure store, used as a database, cache, and message broker
+<img width="994" height="593" alt="image" src="https://github.com/user-attachments/assets/08b49fb6-ddaa-4282-b982-af319f4b9110" />
