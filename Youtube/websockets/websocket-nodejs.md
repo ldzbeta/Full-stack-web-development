@@ -1,20 +1,23 @@
-Docs:https://github.com/websockets/ws
-Initialize an empty Node.js project
-npm init -y
+# WebSocket + Node.js (ws) — Setup Notes
 
-Add tsconfig to it
-npx tsc --init
+## Initialize project
+- Initialize an empty Node.js project:
+  - `npm init -y`
 
-create src folder inside of that
+## TypeScript setup
+- Add a tsconfig:
+  - `npx tsc --init`
+- Create `src` folder:
+  - `mkdir src`
+- Update `tsconfig.json`:
+  - `"rootDir": "./src",`
+  - `"outDir": "./dist",`
 
-Update tsconfig
-"rootDir": "./src",
-"outDir": "./dist",
+## Install ws
+- `npm i ws @types/ws`
 
-Install ws
-npm i ws @types/ws
-
- Code using http library
+## Example: Using Node `http` library with `ws`
+```ts
 import WebSocket, { WebSocketServer } from 'ws';
 import http from 'http';
 
@@ -26,28 +29,34 @@ const server = http.createServer(function(request: any, response: any) {
 const wss = new WebSocketServer({ server });
 
 wss.on('connection', function connection(ws) {
+ //if any one creates connection following code will execute
+ // ws - socket instance
   ws.on('error', console.error);
 
   ws.on('message', function message(data, isBinary) {
     wss.clients.forEach(function each(client) {
+    // for every client on websocket server broadcast
       if (client.readyState === WebSocket.OPEN) {
+    // if connection to user is open
         client.send(data, { binary: isBinary });
       }
     });
   });
 
+  //above .on are represent event responses
   ws.send('Hello! Message From Server!!');
 });
 
 server.listen(8080, function() {
     console.log((new Date()) + ' Server is listening on port 8080');
 });
+```
 
- 
-Code using express
-npm install express @types/express
+## Example: Using Express with `ws`
+- Install Express types:
+  - `npm install express @types/express`
 
- 
+```ts
 import express from 'express'
 import { WebSocketServer } from 'ws'
 
@@ -55,17 +64,20 @@ const app = express()
 const httpServer = app.listen(8080)
 
 const wss = new WebSocketServer({ server: httpServer });
+```
 
-wss.on('connection', function connection(ws) {
-  ws.on('error', console.error);
+## Notes / Tips
+- Ensure `tsconfig.json` includes `"esModuleInterop": true` (or use compatible import syntax) to avoid default import issues with some modules.
+- Build and run:
+  - `npx tsc` to compile to `./dist`
+  - `node dist/index.js` (or whichever compiled entry file)
+- For production, consider graceful shutdown handling and error handling for WebSocket connections.
+- If using Express middleware (static files, JSON parsing, etc.), set those up on `app` before calling `app.listen`.
 
-  ws.on('message', function message(data, isBinary) {
-    wss.clients.forEach(function each(client) {
-      if (client.readyState === WebSocket.OPEN) {
-        client.send(data, { binary: isBinary });
-      }
-    });
-  });
+```bash
+tsc -b
+# Compile TypeScript project to JavaScript
 
-  ws.send('Hello! Message From Server!!');
-});
+node dist/index.js
+# Run the server
+```
