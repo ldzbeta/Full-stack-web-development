@@ -1,6 +1,8 @@
 # WebSocket Client Notes ⚡️
 Websocket  is a browser API that you can access (very similar to fetch)
 Will work in a raw project , React project and Next project (needs to be client side)
+
+[example simple Chat App](https://github.com/hkirat/real-time-chat)
 ## React (Vite) example — original code  🧩
 
 ```ts
