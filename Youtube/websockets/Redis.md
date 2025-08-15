@@ -48,7 +48,7 @@ Assume Redis clears cache every 10 minutes. If an admin creates an event at the 
    - Cons: Between DB update and cache update there’s a small window where readers may get stale data from the old cache. Also requires careful ordering and retry logic to avoid race conditions.
 
 Summary: The first approach avoids stale cache but can cause extra DB load; the second is fast but risks cache/DB divergence; the third favors DB correctness but needs careful handling to prevent short-lived stale reads. Choose based on your SLA for consistency vs. latency and implement retries/locking/invalidations where necessary.
-
+Harkirat said to use 1.
 ---
 
 ## Starting Redis locally with Docker 🐳
@@ -63,26 +63,26 @@ Notes:
 
 Connect to your container:
 1. Get the container ID:
-   docker ps
+   `docker ps`
 2. Open a shell inside the container:
-   docker exec -it <container_id> /bin/bash
+   `docker exec -it <container_id> /bin/bash`
 3. Start the Redis CLI:
-   redis-cli
+   `redis-cli`
 
 ---
 
 ## Basic Redis commands ✨
 
-- SET user "Unknown"  
+- `SET user "Unknown"  `
   Stores a key-value pair. Values are strings.
 
-- HSET user:100 name "John Doe" email ""  
+- `HSET user:100 name "John Doe" email ""  `
   Use hashes to store multiple fields for a single key (e.g., user with id 100).
 
-- LPUSH key value  
+- `LPUSH key value  `
   Push an element to the left side of a list.
 
-- BRPOP key timeout  
+- `BRPOP key timeout  `
   Blocking right pop: waits for an element to appear if the list is empty. Example:
   - BRPOP problems 0  → block indefinitely(or upto) until an item is pushed
   - BRPOP problems 30 → block up to 30 seconds, then return if nothing appears
