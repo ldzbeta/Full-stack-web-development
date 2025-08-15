@@ -16,3 +16,9 @@ repeatedly checking db to get response - polling approach ⏳
 ---
 - Redis is an open-source, in-memory data structure store, used as a database, cache, and message broker
 <img width="994" height="593" alt="image" src="https://github.com/user-attachments/assets/08b49fb6-ddaa-4282-b982-af319f4b9110" />
+<img width="1350" height="872" alt="image" src="https://github.com/user-attachments/assets/3a77e66c-85e6-4f77-a490-ce85d1054ad8" />
+here the redis clear cache after every 10min , if admin come and make an event at 3rd min , 
+1.clear the redis, put data in postgres
+2. update the redis , update the postgres,
+3. update the postgres, update the redis,
+the first one you have to do others have it's own demerits, explain
