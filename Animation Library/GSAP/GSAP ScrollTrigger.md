@@ -16,7 +16,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 Place this in `app/page.js` (or `pages/index.js`) as a client component:
 
-```jsx
+```tsx
 "use client";
 
 import { useEffect, useRef } from "react";
@@ -26,41 +26,39 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  const boxRef = useRef();
+  const boxRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
+    if (boxRef.current) {
       gsap.to(boxRef.current, {
         x: 400,
         rotation: 360,
         duration: 2,
         scrollTrigger: {
-          trigger: boxRef.current, // element that triggers
-          start: "top 80%",        // when top of box hits 80% of viewport
-          end: "top 30%",          // when top of box hits 30% of viewport
-          scrub: true,             // sync animation with scroll
-          markers: true,           // shows start/end markers (debug)
+          trigger: boxRef.current,
+          start: "top 80%",
+          end: "top 30%",
+          scrub: true,
+          markers: true,
         },
       });
-    });
-
-    // cleanup
-    return () => ctx.revert();
+    }
   }, []);
 
   return (
-    <div className="space-y-[600px] p-10">
-      <h1 className="text-2xl font-bold">Scroll down 👇</h1>
+    <div className="h-[200vh] p-10">
+  <h1 className="text-2xl font-bold">Scroll down 👇</h1>
+  <div
+    ref={boxRef}
+    className="w-20 h-20 bg-blue-500 flex items-center justify-center text-white font-bold mt-[600px]"
+  >
+    Box
+  </div>
+</div>
 
-      <div
-        ref={boxRef}
-        className="w-20 h-20 bg-blue-500 flex items-center justify-center text-white font-bold"
-      >
-        Box
-      </div>
-    </div>
   );
 }
+
 ```
 
 ---
