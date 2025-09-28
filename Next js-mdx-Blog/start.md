@@ -1,7 +1,7 @@
 ## 1) Tailwind config (unchanged)
 Your file (unchanged):
 ```js
-npm install @next/mdx @mdx-js/react
+npm install @mdx-js/loader @mdx-js/react @next/mdx
 ```
 ```js
 /** @type {import('tailwindcss').Config} */
